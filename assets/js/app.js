@@ -253,7 +253,7 @@ const events = {
 		9: { 5: 'Prayer Session', 18: 'Heritage Tour' },
 		10: { 12: 'Meditation Workshop', 25: 'Cultural Festival' },
 		11: { 8: 'Monastery Ceremony', 20: 'Spiritual Retreat' },
-		12: { 15: 'Year-end Celebration', 28: 'New Year Preparation' }
+		12: { 15: 'Year-end Celebration', 28: 'NEW YEAR  Preparation' }
 	}
 };
 function generateCalendar() {
