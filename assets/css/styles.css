@@ -101,29 +101,36 @@ h3 {
     z-index: 1000;
     padding: 1rem 0;
     box-shadow: 0 2px 20px var(--shadow);
+    padding: 1rem 0;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-logo h2 {
-    color: var(--primary-red);
-    margin: 0;
-    font-size: 1.8rem;
-}
-
-.nav-logo span {
-    font-size: 0.9rem;
-    color: var(--text-light);
+.logo-jpeg {
+    height: 50px;   /* Limits the height */
+    width: auto;    /* Keeps aspect ratio */
     display: block;
-    margin-top: -5px;
-}
+  }
+  .nav-logo {
+    display: flex;
+    align-items:center;
+    gap: 10px;   /* space between logo and text */
+    margin-left: 0;  /* Remove any left margin */
+    padding-left: 0;
+  }
+    
+  .pemayangtse-jpeg {
+    height: 50px;   /* Limits the height */
+    width: auto;    /* Keeps aspect ratio */
+    display: block;
+  }
 
 .nav-menu {
     display: flex;
@@ -1248,3 +1255,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--dark-red);
 }
+
+
+
