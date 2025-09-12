@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monastery360 - Digital Heritage Platform for Sikkim's Monasteries</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Monastery360</h2>
+                <span>Digital Heritage Platform</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#virtual-tours" class="nav-link">Virtual Tours</a></li>
+                <li><a href="#transportation" class="nav-link">Transportation</a></li>
+                <li><a href="#cultural-calendar" class="nav-link">Cultural Calendar</a></li>
+                <li><a href="#booking" class="nav-link">Booking</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Discover Sikkim's Sacred Heritage</h1>
+                <p>Embark on a spiritual journey through the ancient monasteries of Sikkim. Experience the rich Buddhist culture, stunning architecture, and serene landscapes that have preserved centuries of wisdom and tradition.</p>
+                <div class="hero-buttons">
+                    <a href="#virtual-tours" class="btn btn-primary">Start Virtual Tour</a>
+                    <a href="#cultural-calendar" class="btn btn-secondary">View Events</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="monastery-showcase">
+                <div class="monastery-card active" data-monastery="rumtek">
+                    <img src="https://images.unsplash.com/photo-1544966503-7cc4ac81b4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rumtek Monastery">
+                    <div class="monastery-info">
+                        <h3>Rumtek Monastery</h3>
+                        <p>The seat of the Karmapa lineage</p>
+                    </div>
+                </div>
+                <div class="monastery-card" data-monastery="pemayangtse">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pemayangtse Monastery">
+                    <div class="monastery-info">
+                        <h3>Pemayangtse Monastery</h3>
+                        <p>One of the oldest monasteries in Sikkim</p>
+                    </div>
+                </div>
+                <div class="monastery-card" data-monastery="tashiding">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tashiding Monastery">
+                    <div class="monastery-info">
+                        <h3>Tashiding Monastery</h3>
+                        <p>Sacred site of the Nyingma tradition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tours Section -->
+    <section id="virtual-tours" class="virtual-tours">
+        <div class="container">
+            <div class="section-header">
+                <h2>Virtual Tours</h2>
+                <p>Explore Sikkim's monasteries through immersive 360° panoramic experiences</p>
+            </div>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-preview">
+                        <img src="https://images.unsplash.com/photo-1544966503-7cc4ac81b4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rumtek Monastery Interior">
+                        <div class="tour-overlay">
+                            <button class="tour-btn" data-tour="rumtek">
+                                <i class="fas fa-play"></i>
+                                Start Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Rumtek Monastery</h3>
+                        <p>Experience the grandeur of the Golden Stupa and meditation halls</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-eye"></i> 360° View</span>
+                            <span><i class="fas fa-info-circle"></i> Hotspots</span>
+                            <span><i class="fas fa-clock"></i> 15 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-preview">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pemayangtse Monastery">
+                        <div class="tour-overlay">
+                            <button class="tour-btn" data-tour="pemayangtse">
+                                <i class="fas fa-play"></i>
+                                Start Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Pemayangtse Monastery</h3>
+                        <p>Discover ancient murals and the famous Sanghthok Palace</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-eye"></i> 360° View</span>
+                            <span><i class="fas fa-info-circle"></i> Hotspots</span>
+                            <span><i class="fas fa-clock"></i> 12 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-preview">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tashiding Monastery">
+                        <div class="tour-overlay">
+                            <button class="tour-btn" data-tour="tashiding">
+                                <i class="fas fa-play"></i>
+                                Start Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Tashiding Monastery</h3>
+                        <p>Witness the sacred chortens and prayer wheels</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-eye"></i> 360° View</span>
+                            <span><i class="fas fa-info-circle"></i> Hotspots</span>
+                            <span><i class="fas fa-clock"></i> 10 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section id="transportation" class="transportation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transportation & Travel</h2>
+                <p>Plan your journey to Sikkim's sacred monasteries</p>
+            </div>
+            <div class="transport-grid">
+                <div class="transport-card">
+                    <div class="transport-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Air Travel</h3>
+                    <p>Bagdogra Airport (IXB) - 124 km from Gangtok</p>
+                    <ul>
+                        <li>Daily flights from Delhi, Mumbai, Kolkata</li>
+                        <li>Airport taxi services available</li>
+                        <li>Helicopter services to Gangtok</li>
+                    </ul>
+                </div>
+                <div class="transport-card">
+                    <div class="transport-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Bus Services</h3>
+                    <p>Regular bus services from major cities</p>
+                    <ul>
+                        <li>Siliguri to Gangtok (4-5 hours)</li>
+                        <li>Darjeeling to Gangtok (3-4 hours)</li>
+                        <li>Local monastery tour buses</li>
+                    </ul>
+                </div>
+                <div class="transport-card">
+                    <div class="transport-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Car Rental</h3>
+                    <p>Self-drive and chauffeur-driven options</p>
+                    <ul>
+                        <li>4WD vehicles for mountain roads</li>
+                        <li>Local driver guides available</li>
+                        <li>Multi-day monastery trail packages</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="itinerary-section">
+                <h3>Suggested Itineraries</h3>
+                <div class="itinerary-tabs">
+                    <button class="tab-btn active" data-tab="3-day">3-Day Monastery Trail</button>
+                    <button class="tab-btn" data-tab="5-day">5-Day Spiritual Journey</button>
+                    <button class="tab-btn" data-tab="7-day">7-Day Heritage Tour</button>
+                </div>
+                <div class="itinerary-content">
+                    <div class="tab-content active" id="3-day">
+                        <div class="day-plan">
+                            <h4>Day 1: Gangtok Arrival</h4>
+                            <p>Arrive in Gangtok, visit Enchey Monastery, explore local markets</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 2: Rumtek & Pemayangtse</h4>
+                            <p>Morning visit to Rumtek Monastery, afternoon at Pemayangtse</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 3: Tashiding & Departure</h4>
+                            <p>Sacred Tashiding Monastery, return to Gangtok for departure</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="5-day">
+                        <div class="day-plan">
+                            <h4>Day 1-2: Gangtok Base</h4>
+                            <p>Explore Gangtok monasteries and acclimatize</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 3: West Sikkim</h4>
+                            <p>Pemayangtse, Tashiding, and Rabdentse ruins</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 4: North Sikkim</h4>
+                            <p>Lachen and Lachung monasteries</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 5: Departure</h4>
+                            <p>Final monastery visits and departure</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="7-day">
+                        <div class="day-plan">
+                            <h4>Day 1-2: Gangtok</h4>
+                            <p>Comprehensive Gangtok monastery tour</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 3-4: West Sikkim</h4>
+                            <p>Pemayangtse, Tashiding, Yuksom monasteries</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 5-6: North Sikkim</h4>
+                            <p>Lachen, Lachung, and high-altitude monasteries</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 7: Departure</h4>
+                            <p>Final visits and spiritual reflection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Calendar Section -->
+    <section id="cultural-calendar" class="cultural-calendar">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cultural Calendar</h2>
+                <p>Discover the rich tapestry of Buddhist festivals and ceremonies</p>
+            </div>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <button class="calendar-nav" id="prev-month">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 id="current-month">January 2024</h3>
+                    <button class="calendar-nav" id="next-month">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="calendar-grid" id="calendar-grid">
+                    <!-- Calendar will be populated by JavaScript -->
+                </div>
+            </div>
+            <div class="events-showcase">
+                <h3>Upcoming Events</h3>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">Feb</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Losar Festival</h4>
+                            <p>Tibetan New Year celebrations across all monasteries</p>
+                            <span class="event-location">All Monasteries</span>
+                        </div>
+                        <button class="event-btn">Set Reminder</button>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Buddha Purnima</h4>
+                            <p>Birth, enlightenment, and death of Lord Buddha</p>
+                            <span class="event-location">Rumtek Monastery</span>
+                        </div>
+                        <button class="event-btn">Set Reminder</button>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">08</span>
+                            <span class="month">May</span>
+                        </div>
+                        <div class="event-info">
+                            <h4>Saga Dawa</h4>
+                            <p>Sacred month of Buddha's birth, enlightenment, and parinirvana</p>
+                            <span class="event-location">Tashiding Monastery</span>
+                        </div>
+                        <button class="event-btn">Set Reminder</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book Your Experience</h2>
+                <p>Reserve your monastery visits, guided tours, and cultural events</p>
+            </div>
+            <div class="booking-container">
+                <div class="booking-form">
+                    <form id="booking-form">
+                        <div class="form-group">
+                            <label for="booking-type">Experience Type</label>
+                            <select id="booking-type" required>
+                                <option value="">Select Experience</option>
+                                <option value="monastery-visit">Monastery Visit</option>
+                                <option value="guided-tour">Guided Tour</option>
+                                <option value="meditation-retreat">Meditation Retreat</option>
+                                <option value="festival-participation">Festival Participation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="monastery">Monastery</label>
+                            <select id="monastery" required>
+                                <option value="">Select Monastery</option>
+                                <option value="rumtek">Rumtek Monastery</option>
+                                <option value="pemayangtse">Pemayangtse Monastery</option>
+                                <option value="tashiding">Tashiding Monastery</option>
+                                <option value="enchey">Enchey Monastery</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="visit-date">Visit Date</label>
+                                <input type="date" id="visit-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="group-size">Group Size</label>
+                                <select id="group-size" required>
+                                    <option value="">Select Size</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2-4">2-4 People</option>
+                                    <option value="5-10">5-10 People</option>
+                                    <option value="10+">10+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" rows="3" placeholder="Any special requirements or requests..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-info">Contact Information</label>
+                            <input type="email" id="contact-info" placeholder="Your email address" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Now</button>
+                    </form>
+                </div>
+                <div class="booking-info">
+                    <h3>Booking Information</h3>
+                    <div class="info-card">
+                        <h4>Monastery Visits</h4>
+                        <p>Free entry to most monasteries. Donations welcome.</p>
+                        <span class="price">Free</span>
+                    </div>
+                    <div class="info-card">
+                        <h4>Guided Tours</h4>
+                        <p>Expert local guides with deep monastery knowledge.</p>
+                        <span class="price">₹500/person</span>
+                    </div>
+                    <div class="info-card">
+                        <h4>Meditation Retreats</h4>
+                        <p>Multi-day spiritual retreats with accommodation.</p>
+                        <span class="price">₹2000/day</span>
+                    </div>
+                    <div class="info-card">
+                        <h4>Festival Participation</h4>
+                        <p>Special access to cultural ceremonies and events.</p>
+                        <span class="price">₹300/person</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Monastery Gallery</h2>
+                <p>Capturing the beauty and spirituality of Sikkim's monasteries</p>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+                <button class="filter-btn" data-filter="ceremonies">Ceremonies</button>
+                <button class="filter-btn" data-filter="landscapes">Landscapes</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="architecture">
+                    <img src="https://images.unsplash.com/photo-1544966503-7cc4ac81b4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Monastery Architecture">
+                    <div class="gallery-overlay">
+                        <h4>Golden Stupa</h4>
+                        <p>Rumtek Monastery</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ceremonies">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Buddhist Ceremony">
+                    <div class="gallery-overlay">
+                        <h4>Prayer Ceremony</h4>
+                        <p>Morning prayers at Pemayangtse</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="landscapes">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mountain View">
+                    <div class="gallery-overlay">
+                        <h4>Himalayan Vista</h4>
+                        <p>View from Tashiding Monastery</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="architecture">
+                    <img src="https://images.unsplash.com/photo-1544966503-7cc4ac81b4a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Prayer Wheels">
+                    <div class="gallery-overlay">
+                        <h4>Prayer Wheels</h4>
+                        <p>Sacred spinning wheels</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ceremonies">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Monk Ritual">
+                    <div class="gallery-overlay">
+                        <h4>Monk Ritual</h4>
+                        <p>Traditional ceremonies</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="landscapes">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Monastery Garden">
+                    <div class="gallery-overlay">
+                        <h4>Sacred Gardens</h4>
+                        <p>Peaceful monastery grounds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Monastery360</h3>
+                    <p>Preserving Sikkim's sacred heritage through digital innovation and cultural tourism.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#virtual-tours">Virtual Tours</a></li>
+                        <li><a href="#transportation">Transportation</a></li>
+                        <li><a href="#cultural-calendar">Cultural Calendar</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Monasteries</h4>
+                    <ul>
+                        <li><a href="#">Rumtek Monastery</a></li>
+                        <li><a href="#">Pemayangtse Monastery</a></li>
+                        <li><a href="#">Tashiding Monastery</a></li>
+                        <li><a href="#">Enchey Monastery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Gangtok, Sikkim, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@monastery360.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Monastery360. All rights reserved. | Preserving Heritage, Inspiring Journeys</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Virtual Tour Modal -->
+    <div id="tour-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tour-viewer">
+                <div class="tour-header">
+                    <h3 id="tour-title">Virtual Tour</h3>
+                    <div class="tour-controls">
+                        <button class="control-btn" id="fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="control-btn" id="info-toggle">
+                            <i class="fas fa-info"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="tour-container">
+                    <div class="panorama-view" id="panorama-view">
+                        <!-- 360° panorama will be loaded here -->
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading virtual tour...</p>
+                        </div>
+                    </div>
+                    <div class="tour-info-panel" id="tour-info-panel">
+                        <h4>Tour Information</h4>
+                        <div class="info-content">
+                            <p>Click on hotspots to learn more about different areas of the monastery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
