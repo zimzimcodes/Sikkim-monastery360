@@ -16,7 +16,6 @@ const galleryItems = document.querySelectorAll('.gallery-item');
 const bookingForm = document.getElementById('booking-form');
 const eventButtons = document.querySelectorAll('.event-btn');
 
-<<<<<<< HEAD
 // Monastery Popup Elements
 const rumtekCard = document.getElementById('rumtek-card');
 const rumtekModal = document.getElementById('rumtek-modal');
@@ -49,8 +48,6 @@ const cabClose = document.querySelector('.cab-close');
 const airModal = document.getElementById('air-modal');
 const airClose = document.querySelector('.air-close');
 
-=======
->>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 // Global Variables
 let currentDate = new Date();
 let currentMonth = currentDate.getMonth();
@@ -459,7 +456,6 @@ window.addEventListener('scroll', () => {
 	document.head.appendChild(style);
 })();
 
-<<<<<<< HEAD
 // Monastery Popup Functions
 function openRumtekModal() {
     if (rumtekModal) {
@@ -1072,12 +1068,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Virtual Tour Modal Function
-=======
-document.addEventListener('DOMContentLoaded', () => { console.log('Monastery360 interactivity initialized'); });
-
-// Override openTourModal with 360° iframe implementation using panoramaSources
-// Paste your iframe URLs into panoramaSources at the top of this file
->>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 openTourModal = function(tourType) {
     if (!modal) return;
     const tourTitle = document.getElementById('tour-title');
