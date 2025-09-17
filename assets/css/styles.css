@@ -107,13 +107,18 @@ h3 {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
+<<<<<<< HEAD
     padding: 0 20px;  /* Add some padding for better spacing */
+=======
+    padding: 0 ;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo-jpeg {
+<<<<<<< HEAD
     height: 45px;   /* Slightly smaller height */
     width: auto;    /* Keeps aspect ratio */
     display: block;
@@ -155,6 +160,18 @@ h3 {
     margin: 0;
     line-height: 1;
     font-weight: 400;
+=======
+    height: 50px;   /* Limits the height */
+    width: auto;    /* Keeps aspect ratio */
+    display: block;
+  }
+  .nav-logo {
+    display: flex;
+    align-items:center;
+    gap: 10px;   /* space between logo and text */
+    margin-left: 0;  /* Remove any left margin */
+    padding-left: 0;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
   }
     
   .pemayangtse-jpeg {
@@ -539,6 +556,7 @@ h3 {
 /* Cultural Calendar Section */
 .cultural-calendar {
     padding: 6rem 0;
+<<<<<<< HEAD
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     position: relative;
     overflow: hidden;
@@ -616,12 +634,16 @@ h3 {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+=======
+    background: var(--white);
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-container {
     background: var(--white);
     border-radius: 20px;
     padding: 2rem;
+<<<<<<< HEAD
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     margin-bottom: 3rem;
     position: relative;
@@ -636,6 +658,10 @@ h3 {
     right: 0;
     height: 4px;
     background: var(--gradient-primary);
+=======
+    box-shadow: 0 10px 30px var(--shadow);
+    margin-bottom: 3rem;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-header {
@@ -643,77 +669,117 @@ h3 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+<<<<<<< HEAD
     padding-bottom: 1rem;
     border-bottom: 2px solid #f0f0f0;
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-nav {
     background: var(--gradient-primary);
     color: var(--white);
     border: none;
+<<<<<<< HEAD
     width: 45px;
     height: 45px;
+=======
+    width: 40px;
+    height: 40px;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+=======
+    transition: transform 0.3s ease;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-nav:hover {
     transform: scale(1.1);
+<<<<<<< HEAD
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 #current-month {
     color: var(--primary-red);
     margin: 0;
+<<<<<<< HEAD
     font-size: 1.5rem;
     font-weight: 700;
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+<<<<<<< HEAD
     gap: 2px;
     background: #f0f0f0;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+=======
+    gap: 1px;
+    background: var(--text-light);
+    border-radius: 10px;
+    overflow: hidden;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-day {
     background: var(--white);
     padding: 1rem;
+<<<<<<< HEAD
     min-height: 90px;
+=======
+    min-height: 80px;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+<<<<<<< HEAD
     transition: all 0.3s ease;
     position: relative;
     border: 1px solid #f0f0f0;
+=======
+    transition: background 0.3s ease;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-day:hover {
     background: var(--light-gold);
+<<<<<<< HEAD
     transform: scale(1.05);
     z-index: 2;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-day.other-month {
     color: #ccc;
+<<<<<<< HEAD
     background: #fafafa;
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-day.has-event {
     background: var(--gradient-gold);
     color: var(--white);
     font-weight: bold;
+<<<<<<< HEAD
     position: relative;
 }
 
@@ -724,11 +790,14 @@ h3 {
     right: 5px;
     font-size: 0.8rem;
     color: var(--white);
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .calendar-day.today {
     background: var(--gradient-primary);
     color: var(--white);
+<<<<<<< HEAD
     font-weight: bold;
     box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
 }
@@ -736,18 +805,33 @@ h3 {
 /* Enhanced Events Showcase */
 .events-showcase {
     margin-top: 2rem;
+=======
+}
+
+/* Events Showcase */
+.events-showcase h3 {
+    color: var(--primary-red);
+    margin-bottom: 2rem;
+    text-align: center;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .events-grid {
     display: grid;
+<<<<<<< HEAD
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
+=======
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .event-card {
     background: var(--white);
     border-radius: 20px;
+<<<<<<< HEAD
     padding: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -780,11 +864,24 @@ h3 {
 .event-card.featured {
     border: 2px solid var(--gold);
     box-shadow: 0 15px 35px rgba(212, 175, 55, 0.2);
+=======
+    padding: 2rem;
+    box-shadow: 0 10px 30px var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .event-date {
     background: var(--gradient-primary);
     color: var(--white);
+<<<<<<< HEAD
     padding: 1.5rem;
     text-align: center;
     min-width: 100px;
@@ -797,17 +894,29 @@ h3 {
 
 .event-card.featured .event-date {
     background: var(--gradient-gold);
+=======
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 80px;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .event-date .day {
     display: block;
+<<<<<<< HEAD
     font-size: 2rem;
     font-weight: bold;
     line-height: 1;
+=======
+    font-size: 1.5rem;
+    font-weight: bold;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .event-date .month {
     display: block;
+<<<<<<< HEAD
     font-size: 1rem;
     font-weight: 600;
     margin-top: 0.25rem;
@@ -838,17 +947,29 @@ h3 {
     align-self: flex-start;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+=======
+    font-size: 0.9rem;
+}
+
+.event-info {
+    flex: 1;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .event-info h4 {
     color: var(--primary-red);
+<<<<<<< HEAD
     margin: 0;
     font-size: 1.3rem;
     font-weight: 700;
+=======
+    margin-bottom: 0.5rem;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 .event-info p {
     color: var(--text-light);
+<<<<<<< HEAD
     margin: 0;
     line-height: 1.5;
     font-size: 0.95rem;
@@ -1152,11 +1273,18 @@ h3 {
 }
 
 .route {
+=======
+    margin-bottom: 0.5rem;
+}
+
+.event-location {
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
     color: var(--text-light);
     font-size: 0.9rem;
     font-style: italic;
 }
 
+<<<<<<< HEAD
 .package-features ul {
     list-style: none;
     padding: 0;
@@ -1334,6 +1462,21 @@ h3 {
         gap: 1rem;
         text-align: center;
     }
+=======
+.event-btn {
+    background: var(--gradient-gold);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.event-btn:hover {
+    transform: scale(1.05);
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 }
 
 /* Booking Section */
@@ -1738,6 +1881,7 @@ h3 {
     .nav-menu li {
         margin: 1rem 0;
     }
+<<<<<<< HEAD
     
     .nav-logo {
         gap: 8px;  /* Reduce gap on mobile */
@@ -1754,6 +1898,8 @@ h3 {
     .logo-jpeg {
         height: 40px;  /* Smaller logo on mobile */
     }
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 
     h1 {
         font-size: 2.5rem;
@@ -1850,7 +1996,11 @@ h3 {
     }
 
     .calendar-grid {
+<<<<<<< HEAD
         gap: 1px;
+=======
+        gap: 0;
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
     }
 
     .calendar-day {
@@ -1858,6 +2008,7 @@ h3 {
         min-height: 60px;
         font-size: 0.8rem;
     }
+<<<<<<< HEAD
     
     .calendar-tabs {
         flex-direction: column;
@@ -1905,6 +2056,8 @@ h3 {
     .festival-icon {
         align-self: center;
     }
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 
     .gallery-filters {
         flex-direction: column;
@@ -1983,6 +2136,7 @@ html {
     background: var(--dark-red);
 }
 
+<<<<<<< HEAD
 /* Monastery Popup Modals */
 .monastery-modal {
     display: none;
@@ -3863,5 +4017,7 @@ html {
     }
 }
 
+=======
+>>>>>>> 421e57b1e313aa85165862097f848b5f56e27e5a
 
 
