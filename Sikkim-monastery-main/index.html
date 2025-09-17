@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monastery360 - Digital Heritage Platform for Sikkim's Monasteries</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/logo.jpeg" alt="Monastery360 Logo" class="logo-jpeg" />
+                <div class="logo-text">
+                    <h2>Monastery360</h2>
+                    <span>Digital Heritage Platform</span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#virtual-tours" class="nav-link">Virtual Tours</a></li>
+                <li><a href="#transportation" class="nav-link">Transportation</a></li>
+                <li><a href="#cultural-calendar" class="nav-link">Cultural Calendar</a></li>
+                <li><a href="#booking" class="nav-link">Booking</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><button class="signin-btn" onclick="openSignInModal()">
+                    <i class="fas fa-user"></i>
+                    <span>Sign In</span>
+                </button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Discover Sikkim's Sacred Heritage</h1>
+                <p>Embark on a spiritual journey through the ancient monasteries of Sikkim. Experience the rich Buddhist culture, stunning architecture, and serene landscapes that have preserved centuries of wisdom and tradition.</p>
+                <div class="hero-buttons">
+                    <a href="#virtual-tours" class="btn btn-primary">Start Virtual Tour</a>
+                    <a href="#cultural-calendar" class="btn btn-secondary">View Events</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="monastery-showcase">
+                <div class="monastery-card active" data-monastery="rumtek" id="rumtek-card">
+                    <img src="https://www.karmapa.org/wp-content/uploads/Rumtek_Monastery_-_Inside_Close_View-1400px-cropped.jpg" alt="Rumtek Monastery">
+                    <div class="monastery-info">
+                        <h3>Rumtek Monastery</h3>
+                        <p>The seat of the Karmapa lineage</p>
+                    </div>
+                </div>
+                <div class="monastery-card" data-monastery="pemayangtse" id="pemayangtse-card">
+                    <img src="https://adventuresindbad.com/wp-content/uploads/2019/04/LogoLicious_20190414_103925.png" alt="Pemayangtse Monastery">
+                    <div class="monastery-info">
+                        <h3>Pemayangtse Monastery</h3>
+                        <p>One of the oldest monasteries in Sikkim</p>
+                    </div>
+                </div>
+                <div class="monastery-card" data-monastery="tashiding" id="tashiding-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Mani_stone_slabs_outside_Tashiding_Monastery.jpg/1920px-Mani_stone_slabs_outside_Tashiding_Monastery.jpg" alt="Tashiding Monastery">
+                    <div class="monastery-info">
+                        <h3>Tashiding Monastery</h3>
+                        <p>Sacred site of the Nyingma tradition</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tours Section -->
+    <section id="virtual-tours" class="virtual-tours">
+        <div class="container">
+            <div class="section-header">
+                <h2>Virtual Tours</h2>
+                <p>Explore Sikkim's monasteries through immersive 360° panoramic experiences</p>
+            </div>
+            <div class="tours-grid">
+                <div class="tour-card">
+                    <div class="tour-preview">
+                        <img src="https://media.istockphoto.com/id/183380513/photo/rumtek-monastery.jpg?s=1024x1024&w=is&k=20&c=5-G9kTDbQkY_Sz7MNgG3dbW4rGlM-w7ZeVMuYFO2jSk=" alt="Rumtek Monastery Interior">
+                        <div class="tour-overlay">
+                            <button class="tour-btn" data-tour="rumtek">
+                                <i class="fas fa-play"></i>
+                                Start Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Rumtek Monastery</h3>
+                        <p>Experience the grandeur of the Golden Stupa and meditation halls</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-eye"></i> 360° View</span>
+                            <span><i class="fas fa-info-circle"></i> Hotspots</span>
+                            <span><i class="fas fa-clock"></i> 15 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-preview">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/e9/e0/6a/pemayangtse-monastery.jpg?w=2000&h=-1&s=1" alt="Pemayangtse Monastery">
+                        <div class="tour-overlay">
+                            <button class="tour-btn" data-tour="pemayangtse">
+                                <i class="fas fa-play"></i>
+                                Start Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Pemayangtse Monastery</h3>
+                        <p>Discover ancient murals and the famous Sanghthok Palace</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-eye"></i> 360° View</span>
+                            <span><i class="fas fa-info-circle"></i> Hotspots</span>
+                            <span><i class="fas fa-clock"></i> 12 min</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <div class="tour-preview">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/0e/cb/ac/caption.jpg?w=1100&h=-1&s=1" alt="Tashiding Monastery">
+                        <div class="tour-overlay">
+                            <button class="tour-btn" data-tour="tashiding">
+                                <i class="fas fa-play"></i>
+                                Start Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tour-info">
+                        <h3>Tashiding Monastery</h3>
+                        <p>Witness the sacred chortens and prayer wheels</p>
+                        <div class="tour-features">
+                            <span><i class="fas fa-eye"></i> 360° View</span>
+                            <span><i class="fas fa-info-circle"></i> Hotspots</span>
+                            <span><i class="fas fa-clock"></i> 10 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation Section -->
+    <section id="transportation" class="transportation">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transportation & Travel</h2>
+                <p>Plan your journey to Sikkim's sacred monasteries</p>
+            </div>
+            <div class="transport-grid">
+                <div class="transport-card clickable" onclick="openAirModal()">
+                    <div class="transport-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Air Travel</h3>
+                    <p>Bagdogra Airport (IXB) - 124 km from Gangtok</p>
+                    <ul>
+                        <li>Daily flights from Delhi, Mumbai, Kolkata</li>
+                        <li>Airport taxi services available</li>
+                        <li>Helicopter services to Gangtok</li>
+                    </ul>
+                    <div class="transport-action">
+                        <button class="transport-btn">
+                            <i class="fas fa-plane"></i>
+                            View Flight Routes & Book
+                        </button>
+                    </div>
+                </div>
+                <div class="transport-card clickable" onclick="openSNTModal()">
+                    <div class="transport-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Bus Services</h3>
+                    <p>Regular bus services from major cities</p>
+                    <ul>
+                        <li>Siliguri to Gangtok (4-5 hours)</li>
+                        <li>Darjeeling to Gangtok (3-4 hours)</li>
+                        <li>Local monastery tour buses</li>
+                    </ul>
+                    <div class="transport-action">
+                        <button class="transport-btn">
+                            <i class="fas fa-ticket-alt"></i>
+                            View SNT Bus Routes & Book
+                        </button>
+                    </div>
+                </div>
+                <div class="transport-card clickable" onclick="openCabModal()">
+                    <div class="transport-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Cab Services</h3>
+                    <p>Comfortable and reliable cab services</p>
+                    <ul>
+                        <li>Professional drivers</li>
+                        <li>AC vehicles with GPS</li>
+                        <li>Transparent pricing</li>
+                    </ul>
+                    <div class="transport-action">
+                        <button class="transport-btn">
+                            <i class="fas fa-car"></i>
+                            View Cab Routes & Book
+                        </button>
+                    </div>
+                </div>
+                <div class="transport-card clickable" onclick="openCarRentalModal()">
+                    <div class="transport-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3>Car Rental</h3>
+                    <p>Self-drive and chauffeur-driven options</p>
+                    <ul>
+                        <li>4WD vehicles for mountain roads</li>
+                        <li>Local driver guides available</li>
+                        <li>Multi-day monastery trail packages</li>
+                    </ul>
+                    <div class="transport-action">
+                        <button class="transport-btn">
+                            <i class="fas fa-car-side"></i>
+                            Book Car Rental
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="itinerary-section">
+                <h3>Suggested Itineraries</h3>
+                <div class="itinerary-tabs">
+                    <button class="tab-btn active" data-tab="3-day">3-Day Monastery Trail</button>
+                    <button class="tab-btn" data-tab="5-day">5-Day Spiritual Journey</button>
+                    <button class="tab-btn" data-tab="7-day">7-Day Heritage Tour</button>
+                </div>
+                <div class="itinerary-content">
+                    <div class="tab-content active" id="3-day">
+                        <div class="day-plan">
+                            <h4>Day 1: Gangtok Arrival</h4>
+                            <p>Arrive in Gangtok, visit Enchey Monastery, explore local markets</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 2: Rumtek & Pemayangtse</h4>
+                            <p>Morning visit to Rumtek Monastery, afternoon at Pemayangtse</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 3: Tashiding & Departure</h4>
+                            <p>Sacred Tashiding Monastery, return to Gangtok for departure</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="5-day">
+                        <div class="day-plan">
+                            <h4>Day 1-2: Gangtok Base</h4>
+                            <p>Explore Gangtok monasteries and acclimatize</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 3: West Sikkim</h4>
+                            <p>Pemayangtse, Tashiding, and Rabdentse ruins</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 4: North Sikkim</h4>
+                            <p>Lachen and Lachung monasteries</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 5: Departure</h4>
+                            <p>Final monastery visits and departure</p>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="7-day">
+                        <div class="day-plan">
+                            <h4>Day 1-2: Gangtok</h4>
+                            <p>Comprehensive Gangtok monastery tour</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 3-4: West Sikkim</h4>
+                            <p>Pemayangtse, Tashiding, Yuksom monasteries</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 5-6: North Sikkim</h4>
+                            <p>Lachen, Lachung, and high-altitude monasteries</p>
+                        </div>
+                        <div class="day-plan">
+                            <h4>Day 7: Departure</h4>
+                            <p>Final visits and spiritual reflection</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Calendar Section -->
+    <section id="cultural-calendar" class="cultural-calendar">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cultural Calendar</h2>
+                <p>Discover the rich tapestry of Buddhist festivals and ceremonies throughout the year</p>
+            </div>
+            
+            <!-- Calendar Navigation Tabs -->
+            <div class="calendar-tabs">
+                <button class="tab-btn active" data-tab="calendar">Calendar View</button>
+                <button class="tab-btn" data-tab="events">Upcoming Events</button>
+                <button class="tab-btn" data-tab="festivals">Major Festivals</button>
+            </div>
+
+            <!-- Calendar View -->
+            <div class="tab-content active" id="calendar">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav" id="prev-month">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h3 id="current-month">January 2024</h3>
+                        <button class="calendar-nav" id="next-month">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="calendar-grid" id="calendar-grid">
+                        <!-- Calendar will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Events View -->
+            <div class="tab-content" id="events">
+                <div class="events-showcase">
+                    <div class="events-grid">
+                        <div class="event-card featured">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">Feb</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="event-info">
+                                <div class="event-badge">Featured</div>
+                                <h4>Losar Festival</h4>
+                                <p>Tibetan New Year celebrations across all monasteries with traditional dances, prayers, and cultural performances</p>
+                                <div class="event-details">
+                                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> All Monasteries</span>
+                                    <span class="event-time"><i class="fas fa-clock"></i> 6:00 AM - 8:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="event-btn primary">Set Reminder</button>
+                                <button class="event-btn secondary">Learn More</button>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="day">22</span>
+                                <span class="month">Mar</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Buddha Purnima</h4>
+                                <p>Birth, enlightenment, and death of Lord Buddha celebrated with special prayers and offerings</p>
+                                <div class="event-details">
+                                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> Rumtek Monastery</span>
+                                    <span class="event-time"><i class="fas fa-clock"></i> 5:00 AM - 7:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="event-btn primary">Set Reminder</button>
+                                <button class="event-btn secondary">Learn More</button>
+                            </div>
+                        </div>
+                        
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="day">08</span>
+                                <span class="month">May</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Saga Dawa</h4>
+                                <p>Sacred month of Buddha's birth, enlightenment, and parinirvana with special ceremonies</p>
+                                <div class="event-details">
+                                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> Tashiding Monastery</span>
+                                    <span class="event-time"><i class="fas fa-clock"></i> All Day</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="event-btn primary">Set Reminder</button>
+                                <button class="event-btn secondary">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="day">12</span>
+                                <span class="month">Jun</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Guru Purnima</h4>
+                                <p>Honoring spiritual teachers and gurus with special prayers and teachings</p>
+                                <div class="event-details">
+                                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> Pemayangtse Monastery</span>
+                                    <span class="event-time"><i class="fas fa-clock"></i> 4:00 AM - 6:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="event-btn primary">Set Reminder</button>
+                                <button class="event-btn secondary">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="day">25</span>
+                                <span class="month">Aug</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Drukpa Tsechu</h4>
+                                <p>Masked dance festival celebrating the victory of good over evil</p>
+                                <div class="event-details">
+                                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> Enchey Monastery</span>
+                                    <span class="event-time"><i class="fas fa-clock"></i> 10:00 AM - 4:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="event-btn primary">Set Reminder</button>
+                                <button class="event-btn secondary">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-date">
+                                <span class="day">03</span>
+                                <span class="month">Dec</span>
+                                <span class="year">2024</span>
+                            </div>
+                            <div class="event-info">
+                                <h4>Ganden Ngamcho</h4>
+                                <p>Winter festival with butter lamp offerings and prayers for peace</p>
+                                <div class="event-details">
+                                    <span class="event-location"><i class="fas fa-map-marker-alt"></i> All Monasteries</span>
+                                    <span class="event-time"><i class="fas fa-clock"></i> 6:00 PM - 8:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="event-actions">
+                                <button class="event-btn primary">Set Reminder</button>
+                                <button class="event-btn secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Major Festivals View -->
+            <div class="tab-content" id="festivals">
+                <div class="festivals-showcase">
+                    <div class="festival-categories">
+                        <div class="festival-category">
+                            <h3><i class="fas fa-star"></i> Major Annual Festivals</h3>
+                            <div class="festival-list">
+                                <div class="festival-item">
+                                    <div class="festival-icon">🏮</div>
+                                    <div class="festival-details">
+                                        <h4>Losar (Tibetan New Year)</h4>
+                                        <p>February 15, 2024 - Most important festival with 15 days of celebrations</p>
+                                        <span class="festival-monasteries">All Monasteries</span>
+                                    </div>
+                                </div>
+                                <div class="festival-item">
+                                    <div class="festival-icon">🌸</div>
+                                    <div class="festival-details">
+                                        <h4>Buddha Purnima</h4>
+                                        <p>March 22, 2024 - Birth, enlightenment, and death of Buddha</p>
+                                        <span class="festival-monasteries">Rumtek Monastery</span>
+                                    </div>
+                                </div>
+                                <div class="festival-item">
+                                    <div class="festival-icon">🕯️</div>
+                                    <div class="festival-details">
+                                        <h4>Saga Dawa</h4>
+                                        <p>May 8, 2024 - Sacred month of Buddha's life events</p>
+                                        <span class="festival-monasteries">Tashiding Monastery</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="festival-category">
+                            <h3><i class="fas fa-mask"></i> Cultural Performances</h3>
+                            <div class="festival-list">
+                                <div class="festival-item">
+                                    <div class="festival-icon">🎭</div>
+                                    <div class="festival-details">
+                                        <h4>Drukpa Tsechu</h4>
+                                        <p>August 25, 2024 - Masked dance festival</p>
+                                        <span class="festival-monasteries">Enchey Monastery</span>
+                                    </div>
+                                </div>
+                                <div class="festival-item">
+                                    <div class="festival-icon">🥁</div>
+                                    <div class="festival-details">
+                                        <h4>Cham Dance Festival</h4>
+                                        <p>September 10, 2024 - Traditional monastic dances</p>
+                                        <span class="festival-monasteries">Pemayangtse Monastery</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-header">
+                <h2>Book Your Experience</h2>
+                <p>Reserve your monastery visits, guided tours, and cultural events</p>
+            </div>
+            <div class="booking-container">
+                <div class="booking-form">
+                    <form id="booking-form">
+                        <div class="form-group">
+                            <label for="booking-type">Experience Type</label>
+                            <select id="booking-type" required>
+                                <option value="">Select Experience</option>
+                                <option value="monastery-visit">Monastery Visit</option>
+                                <option value="guided-tour">Guided Tour</option>
+                                <option value="meditation-retreat">Meditation Retreat</option>
+                                <option value="festival-participation">Festival Participation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="monastery">Monastery</label>
+                            <select id="monastery" required>
+                                <option value="">Select Monastery</option>
+                                <option value="rumtek">Rumtek Monastery</option>
+                                <option value="pemayangtse">Pemayangtse Monastery</option>
+                                <option value="tashiding">Tashiding Monastery</option>
+                                <option value="enchey">Enchey Monastery</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="visit-date">Visit Date</label>
+                                <input type="date" id="visit-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="group-size">Group Size</label>
+                                <select id="group-size" required>
+                                    <option value="">Select Size</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2-4">2-4 People</option>
+                                    <option value="5-10">5-10 People</option>
+                                    <option value="10+">10+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests</label>
+                            <textarea id="special-requests" rows="3" placeholder="Any special requirements or requests..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-info">Contact Information</label>
+                            <input type="email" id="contact-info" placeholder="Your email address" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Now</button>
+                    </form>
+                </div>
+                <div class="booking-info">
+                    <h3>Booking Information</h3>
+                    <div class="info-card">
+                        <h4>Monastery Visits</h4>
+                        <p>Free entry to most monasteries. Donations welcome.</p>
+                        <span class="price">Free</span>
+                    </div>
+                    <div class="info-card">
+                        <h4>Guided Tours</h4>
+                        <p>Expert local guides with deep monastery knowledge.</p>
+                        <span class="price">₹500/person</span>
+                    </div>
+                    <div class="info-card">
+                        <h4>Meditation Retreats</h4>
+                        <p>Multi-day spiritual retreats with accommodation.</p>
+                        <span class="price">₹2000/day</span>
+                    </div>
+                    <div class="info-card">
+                        <h4>Festival Participation</h4>
+                        <p>Special access to cultural ceremonies and events.</p>
+                        <span class="price">₹300/person</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Monastery Gallery</h2>
+                <p>Capturing the beauty and spirituality of Sikkim's monasteries</p>
+            </div>
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+                <button class="filter-btn" data-filter="ceremonies">Ceremonies</button>
+                <button class="filter-btn" data-filter="landscapes">Landscapes</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="architecture" data-monastery="rumtek" onclick="openRumtekModal()">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/07/e6/16/caption.jpg?w=1400&h=-1&s=1" alt="Monastery Architecture">
+                    <div class="gallery-overlay">
+                        <h4>Golden Stupa</h4>
+                        <p>Rumtek Monastery</p>
+                        <button class="gallery-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ceremonies" data-monastery="pemayangtse" onclick="openPemayangtseModal()">
+                    <img src="https://kagyuoffice.org/wp-content/uploads/2016/02/2016.02.21ii.jpg" alt="Buddhist Ceremony">
+                    <div class="gallery-overlay">
+                        <h4>Prayer Ceremony</h4>
+                        <p>Morning prayers at Pemayangtse</p>
+                        <button class="gallery-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="landscapes" data-monastery="tashiding" onclick="openTashidingModal()">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Mani_stone_slabs_outside_Tashiding_Monastery.jpg/1920px-Mani_stone_slabs_outside_Tashiding_Monastery.jpg" alt="Mountain View">
+                    <div class="gallery-overlay">
+                        <h4>Himalayan Vista</h4>
+                        <p>View from Tashiding Monastery</p>
+                        <button class="gallery-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="architecture" data-monastery="rumtek" onclick="openRumtekModal()">
+                    <img src="https://swodeshi.com/wp-content/uploads/2025/05/buddhist-prayer-wheel-1536x1024.jpg" alt="Prayer Wheels">
+                    <div class="gallery-overlay">
+                        <h4>Prayer Wheels</h4>
+                        <p>Sacred spinning wheels at Rumtek</p>
+                        <button class="gallery-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="ceremonies" data-monastery="pemayangtse" onclick="openPemayangtseModal()">
+                    <img src="https://www.imb.org/wp-content/uploads/2018/04/imb-photos-novice-monk-ceremony-8-medium-1200x675.jpg" alt="Monk Ritual">
+                    <div class="gallery-overlay">
+                        <h4>Monk Ritual</h4>
+                        <p>Traditional ceremonies at Pemayangtse</p>
+                        <button class="gallery-btn">Learn More</button>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="landscapes" data-monastery="tashiding" onclick="openTashidingModal()">
+                    <img src="https://brightspotcdn.byu.edu/dims4/default/eda6d09/2147483647/strip/true/crop/6720x4078+0+0/resize/840x510!/quality/90/?url=https%3A%2F%2Fbrigham-young-brightspot-us-east-2.s3.us-east-2.amazonaws.com%2F55%2F3b%2F1d22a3d142e0adceeca90dd8c497%2Fbyodo-in-mark5-copy.jpg" alt="Monastery Garden">
+                    <div class="gallery-overlay">
+                        <h4>Sacred Gardens</h4>
+                        <p>Peaceful grounds at Tashiding</p>
+                        <button class="gallery-btn">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Monastery360</h3>
+                    <p>Preserving Sikkim's sacred heritage through digital innovation and cultural tourism.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#virtual-tours">Virtual Tours</a></li>
+                        <li><a href="#transportation">Transportation</a></li>
+                        <li><a href="#cultural-calendar">Cultural Calendar</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Monasteries</h4>
+                    <ul>
+                        <li><a href="#">Rumtek Monastery</a></li>
+                        <li><a href="#">Pemayangtse Monastery</a></li>
+                        <li><a href="#">Tashiding Monastery</a></li>
+                        <li><a href="#">Enchey Monastery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Gangtok, Sikkim, India</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@monastery360.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Monastery360. All rights reserved. | Preserving Heritage, Inspiring Journeys</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Virtual Tour Modal -->
+    <div id="tour-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="tour-viewer">
+                <div class="tour-header">
+                    <h3 id="tour-title">Virtual Tour</h3>
+                    <div class="tour-controls">
+                        <button class="control-btn" id="fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                        <button class="control-btn" id="info-toggle">
+                            <i class="fas fa-info"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="tour-container">
+                    <div class="panorama-view" id="panorama-view">
+                        <!-- 360° panorama will be loaded here -->
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Loading virtual tour...</p>
+                        </div>
+                    </div>
+                    <div class="tour-info-panel" id="tour-info-panel">
+                        <h4>Tour Information</h4>
+                        <div class="info-content">
+                            <p>Click on hotspots to learn more about different areas of the monastery.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rumtek Monastery Popup Modal -->
+    <div id="rumtek-modal" class="monastery-modal">
+        <div class="monastery-modal-content">
+            <span class="monastery-close">&times;</span>
+            <div class="monastery-header">
+                <img src="https://www.karmapa.org/wp-content/uploads/Rumtek_Monastery_-_Inside_Close_View-1400px-cropped.jpg" alt="Rumtek Monastery" class="monastery-hero-image">
+                <div class="monastery-title-section">
+                    <h2>Rumtek Monastery</h2>
+                    <p class="monastery-subtitle">The Seat of the Karmapa Lineage</p>
+                </div>
+            </div>
+            <div class="monastery-content">
+                <div class="monastery-main-info">
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-history"></i> Historical Significance</h3>
+                        <p>Rumtek Monastery, also known as the Dharma Chakra Centre, is one of the most important Tibetan Buddhist monasteries in Sikkim. Originally built in the 16th century, it was reconstructed in the 1960s by the 16th Karmapa, Rangjung Rigpe Dorje, making it the seat of the Karmapa lineage outside of Tibet.</p>
+                    </div>
+                    
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-archway"></i> Architecture & Features</h3>
+                        <div class="monastery-features">
+                            <div class="feature-item">
+                                <h4>Golden Stupa</h4>
+                                <p>Contains sacred relics of the 16th Karmapa and is the most revered structure in the monastery.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Main Prayer Hall</h4>
+                                <p>Features intricate murals, thangkas, and houses the main shrine with statues of Buddha and the Karmapas.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Monastery Library</h4>
+                                <p>Houses thousands of ancient Buddhist texts, manuscripts, and religious artifacts.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Meditation Halls</h4>
+                                <p>Dedicated spaces for monks' daily meditation practice and spiritual retreats.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-pray"></i> Spiritual Practices</h3>
+                        <p>The monastery follows the Kagyu tradition of Tibetan Buddhism and hosts daily prayers, meditation sessions, and special ceremonies. It serves as a center for Buddhist learning and spiritual practice, attracting practitioners from around the world.</p>
+                    </div>
+
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location & Access</h3>
+                        <p>Located 24 km from Gangtok at an altitude of 1,500 meters, Rumtek Monastery offers breathtaking views of the surrounding mountains. The monastery is easily accessible by road and is open to visitors daily from 6:00 AM to 6:00 PM.</p>
+                    </div>
+                </div>
+
+                <div class="monastery-sidebar">
+                    <div class="monastery-info-card">
+                        <h4>Quick Facts</h4>
+                        <ul>
+                            <li><strong>Founded:</strong> 16th Century (reconstructed 1960s)</li>
+                            <li><strong>Tradition:</strong> Kagyu School of Tibetan Buddhism</li>
+                            <li><strong>Altitude:</strong> 1,500 meters</li>
+                            <li><strong>Distance from Gangtok:</strong> 24 km</li>
+                            <li><strong>Visiting Hours:</strong> 6:00 AM - 6:00 PM</li>
+                            <li><strong>Entry Fee:</strong> Free (donations welcome)</li>
+                        </ul>
+                    </div>
+
+                    <div class="monastery-info-card">
+                        <h4>Best Time to Visit</h4>
+                        <p>March to May and October to December offer the best weather and clear mountain views. The monastery is particularly beautiful during Losar (Tibetan New Year) celebrations in February/March.</p>
+                    </div>
+
+                    <div class="monastery-info-card">
+                        <h4>What to Expect</h4>
+                        <ul>
+                            <li>Peaceful and serene atmosphere</li>
+                            <li>Stunning mountain vistas</li>
+                            <li>Rich cultural and spiritual experience</li>
+                            <li>Opportunity to observe daily prayers</li>
+                            <li>Beautiful traditional architecture</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="monastery-actions">
+                <button class="btn btn-primary" onclick="openTourModal('rumtek')">
+                    <i class="fas fa-play"></i> Start Virtual Tour
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToBooking()">
+                    <i class="fas fa-calendar"></i> Book Visit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pemayangtse Monastery Popup Modal -->
+    <div id="pemayangtse-modal" class="monastery-modal">
+        <div class="monastery-modal-content">
+            <span class="monastery-close">&times;</span>
+            <div class="monastery-header">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/e9/e0/6a/pemayangtse-monastery.jpg?w=2000&h=-1&s=1" alt="Pemayangtse Monastery" class="monastery-hero-image">
+                <div class="monastery-title-section">
+                    <h2>Pemayangtse Monastery</h2>
+                    <p class="monastery-subtitle">One of Sikkim's Oldest Sacred Sites</p>
+                </div>
+            </div>
+            <div class="monastery-content">
+                <div class="monastery-main-info">
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-history"></i> Historical Significance</h3>
+                        <p>Pemayangtse Monastery, meaning "Perfect Sublime Lotus," is one of the oldest and most important monasteries in Sikkim. Founded in 1705 by Lhatsun Namkha Jigme, it belongs to the Nyingma tradition of Tibetan Buddhism and serves as the seat of the Nyingma school in Sikkim.</p>
+                    </div>
+                    
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-archway"></i> Architecture & Features</h3>
+                        <div class="monastery-features">
+                            <div class="feature-item">
+                                <h4>Sanghthok Palace</h4>
+                                <p>A magnificent seven-tiered wooden structure representing the seven heavens in Buddhist cosmology.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Ancient Murals</h4>
+                                <p>Exquisite wall paintings depicting Buddhist deities, mandalas, and religious stories.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Prayer Wheels</h4>
+                                <p>Sacred spinning wheels containing mantras, believed to spread blessings when turned.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Sacred Relics</h4>
+                                <p>Ancient Buddhist texts, thangkas, and religious artifacts of great spiritual significance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-pray"></i> Spiritual Practices</h3>
+                        <p>The monastery follows the Nyingma tradition and hosts daily prayers, meditation sessions, and special ceremonies. It's particularly known for its annual Cham dance festival and serves as a center for Buddhist learning and spiritual practice.</p>
+                    </div>
+
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location & Access</h3>
+                        <p>Located in Pelling, West Sikkim, at an altitude of 2,085 meters, Pemayangtse Monastery offers stunning views of the Kanchenjunga mountain range. The monastery is accessible by road from Gangtok (120 km) and is open to visitors daily from 6:00 AM to 6:00 PM.</p>
+                    </div>
+                </div>
+
+                <div class="monastery-sidebar">
+                    <div class="monastery-info-card">
+                        <h4>Quick Facts</h4>
+                        <ul>
+                            <li><strong>Founded:</strong> 1705 AD</li>
+                            <li><strong>Tradition:</strong> Nyingma School of Tibetan Buddhism</li>
+                            <li><strong>Altitude:</strong> 2,085 meters</li>
+                            <li><strong>Distance from Gangtok:</strong> 120 km</li>
+                            <li><strong>Visiting Hours:</strong> 6:00 AM - 6:00 PM</li>
+                            <li><strong>Entry Fee:</strong> ₹25 per person</li>
+                        </ul>
+                    </div>
+
+                    <div class="monastery-info-card">
+                        <h4>Best Time to Visit</h4>
+                        <p>October to April offers the best weather with clear views of Kanchenjunga. The annual Cham dance festival in February/March is a spectacular time to visit.</p>
+                    </div>
+
+                    <div class="monastery-info-card">
+                        <h4>What to Expect</h4>
+                        <ul>
+                            <li>Breathtaking mountain views</li>
+                            <li>Ancient Buddhist architecture</li>
+                            <li>Rich cultural heritage</li>
+                            <li>Peaceful meditation atmosphere</li>
+                            <li>Traditional Cham dance performances</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="monastery-actions">
+                <button class="btn btn-primary" onclick="openTourModal('pemayangtse')">
+                    <i class="fas fa-play"></i> Start Virtual Tour
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToBooking()">
+                    <i class="fas fa-calendar"></i> Book Visit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tashiding Monastery Popup Modal -->
+    <div id="tashiding-modal" class="monastery-modal">
+        <div class="monastery-modal-content">
+            <span class="monastery-close">&times;</span>
+            <div class="monastery-header">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Mani_stone_slabs_outside_Tashiding_Monastery.jpg/1920px-Mani_stone_slabs_outside_Tashiding_Monastery.jpg" alt="Tashiding Monastery" class="monastery-hero-image">
+                <div class="monastery-title-section">
+                    <h2>Tashiding Monastery</h2>
+                    <p class="monastery-subtitle">Sacred Hilltop Sanctuary</p>
+                </div>
+            </div>
+            <div class="monastery-content">
+                <div class="monastery-main-info">
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-history"></i> Historical Significance</h3>
+                        <p>Tashiding Monastery, meaning "The Devoted Central Glory," is one of the most sacred monasteries in Sikkim. Founded in 1641 by Ngadak Sempa Chempo, it belongs to the Nyingma tradition and is believed to be blessed by Guru Padmasambhava himself. The monastery is considered one of the most spiritually significant sites in Sikkim.</p>
+                    </div>
+                    
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-archway"></i> Architecture & Features</h3>
+                        <div class="monastery-features">
+                            <div class="feature-item">
+                                <h4>Sacred Chortens</h4>
+                                <p>Multiple stupas and chortens containing relics and sacred objects, each with spiritual significance.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Mani Stone Slabs</h4>
+                                <p>Thousands of carved prayer stones with Buddhist mantras, creating a sacred pathway around the monastery.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Prayer Wheels</h4>
+                                <p>Large prayer wheels that visitors can spin to accumulate merit and spread blessings.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Sacred Spring</h4>
+                                <p>A holy water source believed to have healing properties and spiritual significance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-pray"></i> Spiritual Practices</h3>
+                        <p>The monastery is a center for Nyingma Buddhist practice, hosting daily prayers, meditation sessions, and special ceremonies. It's particularly known for its annual Bumchu festival, where sacred water is distributed to devotees, and for being a place of pilgrimage for Buddhists from around the world.</p>
+                    </div>
+
+                    <div class="monastery-section">
+                        <h3><i class="fas fa-map-marker-alt"></i> Location & Access</h3>
+                        <p>Located on a hilltop in West Sikkim at an altitude of 1,500 meters, Tashiding Monastery offers panoramic views of the surrounding valleys and mountains. The monastery is accessible by road from Gangtok (100 km) and requires a short walk uphill from the parking area. It's open daily from 6:00 AM to 6:00 PM.</p>
+                    </div>
+                </div>
+
+                <div class="monastery-sidebar">
+                    <div class="monastery-info-card">
+                        <h4>Quick Facts</h4>
+                        <ul>
+                            <li><strong>Founded:</strong> 1641 AD</li>
+                            <li><strong>Tradition:</strong> Nyingma School of Tibetan Buddhism</li>
+                            <li><strong>Altitude:</strong> 1,500 meters</li>
+                            <li><strong>Distance from Gangtok:</strong> 100 km</li>
+                            <li><strong>Visiting Hours:</strong> 6:00 AM - 6:00 PM</li>
+                            <li><strong>Entry Fee:</strong> Free (donations welcome)</li>
+                        </ul>
+                    </div>
+
+                    <div class="monastery-info-card">
+                        <h4>Best Time to Visit</h4>
+                        <p>March to May and October to December offer the best weather. The Bumchu festival in February/March is a particularly auspicious time to visit.</p>
+                    </div>
+
+                    <div class="monastery-info-card">
+                        <h4>What to Expect</h4>
+                        <ul>
+                            <li>Sacred and peaceful atmosphere</li>
+                            <li>Panoramic mountain views</li>
+                            <li>Ancient prayer stones and chortens</li>
+                            <li>Spiritual pilgrimage experience</li>
+                            <li>Traditional Buddhist ceremonies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="monastery-actions">
+                <button class="btn btn-primary" onclick="openTourModal('tashiding')">
+                    <i class="fas fa-play"></i> Start Virtual Tour
+                </button>
+                <button class="btn btn-secondary" onclick="scrollToBooking()">
+                    <i class="fas fa-calendar"></i> Book Visit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign In Modal -->
+    <div id="signin-modal" class="signin-modal">
+        <div class="signin-modal-content">
+            <span class="signin-close">&times;</span>
+            <div class="signin-header">
+                <h2>Welcome Back</h2>
+                <p>Sign in to your Monastery360 account</p>
+            </div>
+            <form class="signin-form" id="signin-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <i class="fas fa-envelope form-icon"></i>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <i class="fas fa-lock form-icon"></i>
+                    <button type="button" class="toggle-password" onclick="togglePassword()">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="signin-submit-btn">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </button>
+                <div class="signin-divider">
+                    <span>or</span>
+                </div>
+                <div class="social-signin">
+                    <button type="button" class="social-btn google-btn">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                    </button>
+                    <button type="button" class="social-btn facebook-btn">
+                        <i class="fab fa-facebook-f"></i>
+                        Continue with Facebook
+                    </button>
+                </div>
+                <div class="signin-footer">
+                    <p>Don't have an account? <a href="#" onclick="switchToSignUp()">Sign up here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="signin-modal">
+        <div class="signin-modal-content">
+            <span class="signin-close">&times;</span>
+            <div class="signin-header">
+                <h2>Join Monastery360</h2>
+                <p>Create your account to explore Sikkim's monasteries</p>
+            </div>
+            <form class="signin-form" id="signup-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                        <i class="fas fa-user form-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                        <i class="fas fa-user form-icon"></i>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" name="email" required>
+                    <i class="fas fa-envelope form-icon"></i>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <i class="fas fa-phone form-icon"></i>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" required>
+                    <i class="fas fa-lock form-icon"></i>
+                    <button type="button" class="toggle-password" onclick="toggleSignUpPassword()">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <i class="fas fa-lock form-icon"></i>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="IN">India</option>
+                        <option value="US">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                        <option value="AU">Australia</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                        <option value="JP">Japan</option>
+                        <option value="SG">Singapore</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <i class="fas fa-globe form-icon"></i>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                    </label>
+                </div>
+                <button type="submit" class="signin-submit-btn">
+                    <i class="fas fa-user-plus"></i>
+                    Create Account
+                </button>
+                <div class="signin-divider">
+                    <span>or</span>
+                </div>
+                <div class="social-signin">
+                    <button type="button" class="social-btn google-btn">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                    </button>
+                    <button type="button" class="social-btn facebook-btn">
+                        <i class="fab fa-facebook-f"></i>
+                        Continue with Facebook
+                    </button>
+                </div>
+                <div class="signin-footer">
+                    <p>Already have an account? <a href="#" onclick="switchToSignIn()">Sign in here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SNT Bus Service Popup Modal -->
+    <div id="snt-modal" class="snt-modal">
+        <div class="snt-modal-content">
+            <span class="snt-close">&times;</span>
+            <div class="snt-header">
+                <h2>Sikkim Nationalised Transport (SNT)</h2>
+                <p>Official Bus Service - Book your journey to Sikkim's monasteries</p>
+                <div class="snt-badge">
+                    <i class="fas fa-bus"></i>
+                    <span>Official redBus Partner</span>
+                </div>
+            </div>
+            <div class="snt-content">
+                <div class="snt-routes">
+                    <h3><i class="fas fa-route"></i> Popular Bus Routes & Timings</h3>
+                    <div class="routes-grid">
+                        <!-- Siliguri to Gangtok -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Siliguri</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Gangtok</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹288</div>
+                                    <div class="distance">115 Km • 4 Hr 43 Min</div>
+                                    <div class="timings">First: 06:00 | Last: 15:00</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('siliguri-gangtok')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Gangtok to Siliguri -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Gangtok</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Siliguri</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹288</div>
+                                    <div class="distance">115 Km • 5 Hr 0 Min</div>
+                                    <div class="timings">First: 06:00 | Last: 13:30</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('gangtok-siliguri')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Siliguri to Rangpo -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Siliguri</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Rangpo</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹189</div>
+                                    <div class="distance">77 Km • 3 Hr 46 Min</div>
+                                    <div class="timings">First: 06:00 | Last: 15:00</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('siliguri-rangpo')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Rangpo to Siliguri -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Rangpo</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Siliguri</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹189</div>
+                                    <div class="distance">77 Km • 3 Hr 55 Min</div>
+                                    <div class="timings">First: 07:30 | Last: 14:40</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('rangpo-siliguri')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Siliguri to Pelling -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Siliguri</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Pelling</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹341</div>
+                                    <div class="distance">133 Km • 5 Hr 10 Min</div>
+                                    <div class="timings">First: 10:30 | Last: 10:30</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('siliguri-pelling')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Pelling to Siliguri -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Pelling</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Siliguri</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹341</div>
+                                    <div class="distance">133 Km • 5 Hr 10 Min</div>
+                                    <div class="timings">First: 07:30 | Last: 07:30</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('pelling-siliguri')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Siliguri to Singtham -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Siliguri</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Singtham</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹215</div>
+                                    <div class="distance">88 Km • 4 Hr 3 Min</div>
+                                    <div class="timings">First: 06:00 | Last: 15:00</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('siliguri-singtham')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Singtham to Siliguri -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Singtham</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Siliguri</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹215</div>
+                                    <div class="distance">88 Km • 4 Hr 21 Min</div>
+                                    <div class="timings">First: 07:00 | Last: 14:30</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('singtham-siliguri')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Siliguri to Ravangla -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Siliguri</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Ravangla</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹294</div>
+                                    <div class="distance">118 Km • 6 Hr 0 Min</div>
+                                    <div class="timings">First: 13:00 | Last: 13:00</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('siliguri-ravangla')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Ravangla to Siliguri -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Ravangla</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Siliguri</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹294</div>
+                                    <div class="distance">118 Km • 6 Hr 0 Min</div>
+                                    <div class="timings">First: 07:00 | Last: 07:00</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('ravangla-siliguri')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Siliguri to Jorethang -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Siliguri</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Jorethang</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹210</div>
+                                    <div class="distance">84 Km • 3 Hr 58 Min</div>
+                                    <div class="timings">First: 10:30 | Last: 13:30</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('siliguri-jorethang')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Siliguri to Namchi -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Siliguri</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Namchi</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹231</div>
+                                    <div class="distance">93 Km • 5 Hr 0 Min</div>
+                                    <div class="timings">First: 13:00 | Last: 13:00</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('siliguri-namchi')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Namchi to Siliguri -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Namchi</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Siliguri</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="price">From ₹231</div>
+                                    <div class="distance">93 Km • 5 Hr 0 Min</div>
+                                    <div class="timings">First: 08:00 | Last: 08:00</div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookSNT('namchi-siliguri')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="snt-info">
+                    <div class="snt-features">
+                        <h4><i class="fas fa-star"></i> SNT Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> M-ticket available</li>
+                            <li><i class="fas fa-check"></i> Emergency contact number</li>
+                            <li><i class="fas fa-check"></i> 95+ routes daily</li>
+                            <li><i class="fas fa-check"></i> Official redBus partner</li>
+                        </ul>
+                    </div>
+                    <div class="snt-amenities">
+                        <h4><i class="fas fa-bus"></i> Bus Amenities</h4>
+                        <ul>
+                            <li><i class="fas fa-mobile-alt"></i> M-ticket</li>
+                            <li><i class="fas fa-phone"></i> Emergency Contact Number</li>
+                            <li><i class="fas fa-clock"></i> Punctual Service</li>
+                            <li><i class="fas fa-shield-alt"></i> Safe & Reliable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="snt-footer">
+                <div class="snt-partner">
+                    <img src="https://s3.rdbuz.com/web/images/home/rdc/redbus-logo.png" alt="redBus" class="redbus-logo">
+                    <span>Powered by redBus - Official Booking Partner</span>
+                </div>
+                <button class="snt-close-btn" onclick="closeSNTModal()">
+                    <i class="fas fa-times"></i>
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cab Services Popup Modal -->
+    <div id="cab-modal" class="cab-modal">
+        <div class="cab-modal-content">
+            <span class="cab-close">&times;</span>
+            <div class="cab-header">
+                <h2>Cab Services in Sikkim</h2>
+                <p>Comfortable and reliable cab services for monastery tours</p>
+                <div class="cab-badge">
+                    <i class="fas fa-car"></i>
+                    <span>Powered by MakeMyTrip</span>
+                </div>
+            </div>
+            <div class="cab-content">
+                <div class="cab-routes">
+                    <h3><i class="fas fa-route"></i> Popular Cab Routes & Pricing</h3>
+                    <div class="routes-grid">
+                        <!-- Gangtok to Kalimpong -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Gangtok</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Kalimpong</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="distance">38 kms • 1 hr 16 mins</div>
+                                    <div class="included">38 kms included</div>
+                                    <div class="extra-fare">Extra fare ₹13.5/km after 38 kms</div>
+                                    <div class="pricing">
+                                        <span class="price">₹535</span>
+                                        <span class="original-price">₹659</span>
+                                        <span class="tax">+ ₹390 (Taxes & Charges)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCab('gangtok-kalimpong')">
+                                <i class="fas fa-car"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Namchi to Darjeeling -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Namchi</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Darjeeling</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="distance">46 kms • 1 hr 59 mins</div>
+                                    <div class="included">46 kms included</div>
+                                    <div class="extra-fare">Extra fare ₹19/km after 46 kms</div>
+                                    <div class="pricing">
+                                        <span class="price">₹1,878</span>
+                                        <span class="original-price">₹2,239</span>
+                                        <span class="tax">+ ₹627 (Taxes & Charges)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCab('namchi-darjeeling')">
+                                <i class="fas fa-car"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Gangtok to Rangpo -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Gangtok</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Rangpo</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="distance">74 kms • 2 hr 25 mins</div>
+                                    <div class="included">74 kms included</div>
+                                    <div class="extra-fare">Extra fare ₹22.5/km after 74 kms</div>
+                                    <div class="pricing">
+                                        <span class="price">₹4,205</span>
+                                        <span class="original-price">₹4,867</span>
+                                        <span class="tax">+ ₹306 (Taxes & Charges)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCab('gangtok-rangpo')">
+                                <i class="fas fa-car"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Gangtok to Darjeeling -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Gangtok</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Darjeeling</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="distance">97 kms • 3 hr 35 mins</div>
+                                    <div class="included">97 kms included</div>
+                                    <div class="extra-fare">Extra fare ₹20.1/km after 97 kms</div>
+                                    <div class="pricing">
+                                        <span class="price">₹3,626</span>
+                                        <span class="tax">+ ₹277 (Taxes & Charges)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCab('gangtok-darjeeling')">
+                                <i class="fas fa-car"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Namchi to Siliguri -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Namchi</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Siliguri</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="distance">97 kms • 3 hr 1 mins</div>
+                                    <div class="included">97 kms included</div>
+                                    <div class="extra-fare">Extra fare ₹22.5/km after 97 kms</div>
+                                    <div class="pricing">
+                                        <span class="price">₹5,062</span>
+                                        <span class="original-price">₹5,859</span>
+                                        <span class="tax">+ ₹349 (Taxes & Charges)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCab('namchi-siliguri')">
+                                <i class="fas fa-car"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Gangtok to Siliguri -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Gangtok</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Siliguri</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="distance">112 kms • 3 hr 38 mins</div>
+                                    <div class="included">112 kms included</div>
+                                    <div class="extra-fare">Extra fare ₹25.1/km after 112 kms</div>
+                                    <div class="pricing">
+                                        <span class="price">₹3,277</span>
+                                        <span class="tax">+ ₹469 (Taxes & Charges)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCab('gangtok-siliguri')">
+                                <i class="fas fa-car"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Gangtok to Bagdogra -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Gangtok</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Bagdogra</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="distance">125 kms • 3 hr 59 mins</div>
+                                    <div class="included">125 kms included</div>
+                                    <div class="extra-fare">Extra fare ₹35.1/km after 125 kms</div>
+                                    <div class="pricing">
+                                        <span class="price">₹3,428</span>
+                                        <span class="tax">+ ₹298 (Taxes & Charges)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCab('gangtok-bagdogra')">
+                                <i class="fas fa-car"></i>
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cab-info">
+                    <div class="cab-features">
+                        <h4><i class="fas fa-star"></i> Cab Service Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Professional drivers</li>
+                            <li><i class="fas fa-check"></i> Comfortable AC vehicles</li>
+                            <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                            <li><i class="fas fa-check"></i> Transparent pricing</li>
+                        </ul>
+                    </div>
+                    <div class="cab-amenities">
+                        <h4><i class="fas fa-car"></i> Vehicle Amenities</h4>
+                        <ul>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-mobile-alt"></i> GPS Navigation</li>
+                            <li><i class="fas fa-shield-alt"></i> Safe & Reliable</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cab-footer">
+                <div class="cab-partner">
+                    <img src="https://imgak.mmtcdn.com/pwa_v3/pwa_assets/images/mmtLogoWhite.png" alt="MakeMyTrip" class="makemytrip-logo">
+                    <span>Powered by MakeMyTrip - Official Cab Partner</span>
+                </div>
+                <button class="cab-close-btn" onclick="closeCabModal()">
+                    <i class="fas fa-times"></i>
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Air Travel Popup Modal -->
+    <div id="air-modal" class="air-modal">
+        <div class="air-modal-content">
+            <span class="air-close">&times;</span>
+            <div class="air-header">
+                <h2>Air Travel to Sikkim</h2>
+                <p>Convenient flight options to reach Sikkim's sacred monasteries</p>
+                <div class="air-badge">
+                    <i class="fas fa-plane"></i>
+                    <span>Powered by Expedia</span>
+                </div>
+            </div>
+            <div class="air-content">
+                <div class="air-routes">
+                    <h3><i class="fas fa-route"></i> Flight Routes & Airlines</h3>
+                    <div class="routes-grid">
+                        <!-- Kolkata to Sikkim -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Kolkata (West Bengal)</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Pakyong (PYG) / Bagdogra (IXB)</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="airport-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Pakyong (Sikkim) / Bagdogra (West Bengal)
+                                    </div>
+                                    <div class="airlines">
+                                        <i class="fas fa-plane"></i>
+                                        IndiGo, SpiceJet, Air India
+                                    </div>
+                                    <div class="flight-type">
+                                        <i class="fas fa-info-circle"></i>
+                                        Direct flights available
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookAir('kolkata-sikkim')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Delhi to Sikkim -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Delhi (Delhi NCR)</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Bagdogra (IXB)</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="airport-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Bagdogra, West Bengal
+                                    </div>
+                                    <div class="airlines">
+                                        <i class="fas fa-plane"></i>
+                                        Air India, IndiGo, SpiceJet
+                                    </div>
+                                    <div class="flight-type">
+                                        <i class="fas fa-info-circle"></i>
+                                        Direct flights available
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookAir('delhi-sikkim')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Mumbai to Sikkim -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Mumbai (Maharashtra)</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Bagdogra (IXB)</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="airport-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Bagdogra, West Bengal
+                                    </div>
+                                    <div class="airlines">
+                                        <i class="fas fa-plane"></i>
+                                        Multiple domestic airlines
+                                    </div>
+                                    <div class="flight-type">
+                                        <i class="fas fa-info-circle"></i>
+                                        Direct flights available
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookAir('mumbai-sikkim')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Bangalore to Sikkim -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Bangalore (Karnataka)</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Bagdogra (IXB)</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="airport-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Bagdogra, West Bengal
+                                    </div>
+                                    <div class="airlines">
+                                        <i class="fas fa-plane"></i>
+                                        Domestic airlines via connecting flights
+                                    </div>
+                                    <div class="flight-type">
+                                        <i class="fas fa-info-circle"></i>
+                                        Connecting flights via major hubs
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookAir('bangalore-sikkim')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Guwahati to Sikkim -->
+                        <div class="route-card">
+                            <div class="route-info">
+                                <div class="route-cities">
+                                    <span class="from-city">Guwahati (Assam)</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span class="to-city">Pakyong (PYG) / Bagdogra (IXB)</span>
+                                </div>
+                                <div class="route-details">
+                                    <div class="airport-location">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        Pakyong / Bagdogra
+                                    </div>
+                                    <div class="airlines">
+                                        <i class="fas fa-plane"></i>
+                                        Restricted / Limited Flights (Pakyong)
+                                    </div>
+                                    <div class="flight-type">
+                                        <i class="fas fa-info-circle"></i>
+                                        Limited availability
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookAir('guwahati-sikkim')">
+                                <i class="fas fa-ticket-alt"></i>
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="air-info">
+                    <div class="air-features">
+                        <h4><i class="fas fa-star"></i> Flight Features</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Multiple airline options</li>
+                            <li><i class="fas fa-check"></i> Direct flights from major cities</li>
+                            <li><i class="fas fa-check"></i> Competitive pricing</li>
+                            <li><i class="fas fa-check"></i> Easy booking process</li>
+                        </ul>
+                    </div>
+                    <div class="air-amenities">
+                        <h4><i class="fas fa-plane"></i> Airport Information</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Pakyong Airport (PYG) - Sikkim</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Bagdogra Airport (IXB) - West Bengal</li>
+                            <li><i class="fas fa-car"></i> Airport taxi services available</li>
+                            <li><i class="fas fa-helicopter"></i> Helicopter services to Gangtok</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="air-footer">
+                <div class="air-partner">
+                    <img src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0f976eb8c438abcf1ffa77b6cfc4c/images/EG_Wordmark_blue_RGB.svg" alt="Expedia" class="expedia-logo">
+                    <span>Powered by Expedia - Official Flight Partner</span>
+                </div>
+                <button class="air-close-btn" onclick="closeAirModal()">
+                    <i class="fas fa-times"></i>
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Rental Popup Modal -->
+    <div id="car-rental-modal" class="car-rental-modal">
+        <div class="car-rental-modal-content">
+            <span class="car-rental-close">&times;</span>
+            <div class="car-rental-header">
+                <h2>Car Rental Services in Sikkim</h2>
+                <p>Professional car rental services for monastery tours and sightseeing</p>
+                <div class="car-rental-badge">
+                    <i class="fas fa-car-side"></i>
+                    <span>Powered by 99Taxi</span>
+                </div>
+            </div>
+            <div class="car-rental-content">
+                <div class="car-rental-packages">
+                    <h3><i class="fas fa-route"></i> Popular Car Rental Packages</h3>
+                    <div class="packages-grid">
+                        <!-- Gangtok & Pelling Package -->
+                        <div class="package-card">
+                            <div class="package-info">
+                                <h4>Gangtok & Pelling</h4>
+                                <div class="package-details">
+                                    <span class="duration">6 Days / 5 Nights</span>
+                                    <span class="route">Gangtok (3N) > Pelling (2N)</span>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Transfer & Sightseeing</li>
+                                        <li><i class="fas fa-check"></i> Professional Driver</li>
+                                        <li><i class="fas fa-check"></i> AC Vehicle</li>
+                                        <li><i class="fas fa-check"></i> Monastery Tours</li>
+                                    </ul>
+                                </div>
+                                <div class="package-price">
+                                    <span class="price">Starting @ ₹25,500/-</span>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCarRental('gangtok-pelling')">
+                                <i class="fas fa-car-side"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Gangtok & Darjeeling Package -->
+                        <div class="package-card">
+                            <div class="package-info">
+                                <h4>Gangtok & Darjeeling</h4>
+                                <div class="package-details">
+                                    <span class="duration">6 Days / 5 Nights</span>
+                                    <span class="route">Gangtok (3N) > Darjeeling (2N)</span>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Transfer & Sightseeing</li>
+                                        <li><i class="fas fa-check"></i> Professional Driver</li>
+                                        <li><i class="fas fa-check"></i> AC Vehicle</li>
+                                        <li><i class="fas fa-check"></i> Monastery Tours</li>
+                                    </ul>
+                                </div>
+                                <div class="package-price">
+                                    <span class="price">Starting @ ₹23,500/-</span>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCarRental('gangtok-darjeeling')">
+                                <i class="fas fa-car-side"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- Complete Sikkim Package -->
+                        <div class="package-card featured">
+                            <div class="package-info">
+                                <h4>Complete Sikkim Tour</h4>
+                                <div class="package-details">
+                                    <span class="duration">7 Days / 6 Nights</span>
+                                    <span class="route">Gangtok (3N) > Pelling (1N) > Darjeeling (2N)</span>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Transfer & Sightseeing</li>
+                                        <li><i class="fas fa-check"></i> Professional Driver</li>
+                                        <li><i class="fas fa-check"></i> AC Vehicle</li>
+                                        <li><i class="fas fa-check"></i> All Monastery Tours</li>
+                                    </ul>
+                                </div>
+                                <div class="package-price">
+                                    <span class="price">Starting @ ₹29,500/-</span>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCarRental('complete-sikkim')">
+                                <i class="fas fa-car-side"></i>
+                                Book Now
+                            </button>
+                        </div>
+
+                        <!-- North Sikkim Package -->
+                        <div class="package-card">
+                            <div class="package-info">
+                                <h4>North Sikkim Adventure</h4>
+                                <div class="package-details">
+                                    <span class="duration">7 Days / 6 Nights</span>
+                                    <span class="route">Gangtok (4N) > Lachen (1N) > Lachung (1N)</span>
+                                </div>
+                                <div class="package-features">
+                                    <ul>
+                                        <li><i class="fas fa-check"></i> Transfer & Sightseeing</li>
+                                        <li><i class="fas fa-check"></i> Professional Driver</li>
+                                        <li><i class="fas fa-check"></i> 4WD Vehicle</li>
+                                        <li><i class="fas fa-check"></i> High Altitude Tours</li>
+                                    </ul>
+                                </div>
+                                <div class="package-price">
+                                    <span class="price">Contact for Price</span>
+                                </div>
+                            </div>
+                            <button class="book-now-btn" onclick="bookCarRental('north-sikkim')">
+                                <i class="fas fa-car-side"></i>
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-rental-info">
+                    <div class="car-rental-features">
+                        <h4><i class="fas fa-star"></i> Why Choose Our Car Rental Service?</h4>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Professional & experienced drivers</li>
+                            <li><i class="fas fa-check"></i> Well-maintained vehicles</li>
+                            <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                            <li><i class="fas fa-check"></i> Transparent pricing</li>
+                            <li><i class="fas fa-check"></i> Local expertise & guidance</li>
+                        </ul>
+                    </div>
+                    <div class="car-rental-amenities">
+                        <h4><i class="fas fa-car"></i> Vehicle Amenities</h4>
+                        <ul>
+                            <li><i class="fas fa-snowflake"></i> Air Conditioning</li>
+                            <li><i class="fas fa-wifi"></i> Free WiFi</li>
+                            <li><i class="fas fa-mobile-alt"></i> GPS Navigation</li>
+                            <li><i class="fas fa-suitcase"></i> Spacious luggage space</li>
+                            <li><i class="fas fa-shield-alt"></i> Safety equipment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="car-rental-footer">
+                <div class="car-rental-partner">
+                    <img src="https://www.sikkim.taxi/wp-content/uploads/2023/01/99taxi-favicon.png" alt="99Taxi" class="sikkim-taxi-logo">
+                    <span>Powered by 99Taxi - Official Car Rental Partner</span>
+                </div>
+                <button class="car-rental-close-btn" onclick="closeCarRentalModal()">
+                    <i class="fas fa-times"></i>
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
